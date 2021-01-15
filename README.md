@@ -1,1 +1,1 @@
-# RSA_Cryptography
+A C++ program to implement RSA cryptography algorithm for large values of RSA key to perform encryption and decryption of data sent from one company to another.
