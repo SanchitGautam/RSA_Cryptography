@@ -186,7 +186,6 @@ string division(string num, string div){
 }
 string mod(string n,string d){
     return difference(n,multiply(division(n,d),d));
-
 }
 string power(string x,int n){
     if(n==0)
@@ -198,7 +197,6 @@ string power(string x,int n){
         return multiply(temp,temp);
     else
         return multiply(x,multiply(temp,temp));
-
 }
 int g=0;
 string power(string x,string n,string N){
@@ -218,7 +216,6 @@ string gcd(string a, string b)
     if (isEqualTo(b,"0"))
         return a;
     return gcd(b, mod(a,b));
-
 }
 string generatePrime(){
     string primes[]={"1772629573679152589335751",
@@ -242,7 +239,6 @@ string generatePrime(){
         "93038004734008531347720607",
         "10481819821432872613578271",};
     return primes[rand()%20];
-
 }
 int mod(string num, int a)
 {
@@ -325,7 +321,6 @@ class RSA{
         c=mod(power(mnum,r_e,r_N),r_N);
         return c;
     }
-
     string decryptMessage(string cypherText){
         string decryptedMsg,decrptedMsgnum;
         decrptedMsgnum=mod(power(cypherText,d,N),N);
@@ -333,7 +328,6 @@ class RSA{
         return decryptedMsg;
     }
 };
-
 int main(){
     srand(time(0));
     RSA companyA,companyB;
@@ -357,7 +351,4 @@ int main(){
     cout<<"Encrypted Message: "<<cypherText<<endl;
     string dMessage=companyB.decryptMessage(cypherText);
     cout<<"Message reached at company B: "<<dMessage;
-
-
-
 }
